@@ -6,9 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestController {
 
-    @RequestMapping("/hell")
+    @RequestMapping("/hello")
     public Object test(){
-        return "hello";
+        return "register-login";
+    }
+
+    @RequestMapping("/show")
+    public Object show(){
+        return "goods";
     }
 
 }

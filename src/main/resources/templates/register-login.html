@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>CSS3登录注册窗口界面滑动切换特效</title>
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+</head>
+<body><script src="/demos/googlegg.js"></script>
+<div style="text-align:center;margin:10px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</p>
+<p>来源：<a href="http://www.lanrenzhijia.com/" target="_blank">懒人素材</a></p>
+</div>
+<div class="cotn_principal">
+  <div class="cont_centrar">
+    <div class="cont_login">
+      <div class="cont_info_log_sign_up">
+        <div class="col_md_login">
+          <div class="cont_ba_opcitiy">
+            <h2>登录</h2>
+            <p>请选择</p>
+            <button class="btn_login" onClick="cambiar_login()">登录</button>
+          </div>
+        </div>
+        <div class="col_md_sign_up">
+          <div class="cont_ba_opcitiy">
+            <h2>注册</h2>
+            <p>请选择</p>
+            <button class="btn_sign_up" onClick="cambiar_sign_up()">注册</button>
+          </div>
+        </div>
+      </div>
+      <div class="cont_back_info">
+        <div class="cont_img_back_grey"> <img th:src="@{/images/po.jpg}" alt="" /> </div>
+      </div>
+      <div class="cont_forms" >
+        <div class="cont_img_back_"> <img th:src="@{/images/po.jpg}" alt="" /> </div>
+        <div class="cont_form_login"> <a href="#" onClick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+          <h2>登录</h2>
+          <input type="text" id="Username" placeholder="Username" />
+          <input type="password" id="Password" placeholder="Password" />
+          <button class="btn_login" onClick="cambiar_login()">登录</button>
+        </div>
+        <div class="cont_form_sign_up"> <a href="#" onClick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+          <h2>注册</h2>
+          <input type="text" id="r_username" placeholder="用户名" />
+          <input type="password" id="r_password" placeholder="密码" />
+          <input type="password" id="retypePassword" placeholder="确认密码" />
+          <button class="btn_sign_up" onClick="cambiar_sign_up()">注册</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</body>
+</html>
+

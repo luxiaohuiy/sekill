@@ -1,6 +1,7 @@
 package com.baz.sekill.mapper;
 
 import com.baz.sekill.model.SkUser;
+import org.apache.ibatis.annotations.Param;
 
 public interface SkUserMapper {
     /**
@@ -50,4 +51,12 @@ public interface SkUserMapper {
      * @mbggenerated Mon Apr 15 10:02:17 CST 2019
      */
     int updateByPrimaryKey(SkUser record);
+
+    /**
+     * 根据用户名密码查询
+     * @param username
+     * @param password
+     * @return
+     */
+    SkUser selectByUsernameAndPwd(@Param("username")String username,@Param("password")String password);
 }
